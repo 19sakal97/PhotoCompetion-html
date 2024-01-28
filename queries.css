@@ -1,0 +1,151 @@
+@media only screen and (max-width: 1165px) { /*v konzoli zjistím proč je rozházený obrázek*/
+   /****************fotogalerie*********************/
+    
+    .photos{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /******Reference*****/
+      
+    .col.span-1-of-2.one{
+        width: 48.5%; /*protože 1-2 je 49.2%*/
+        margin-left: 10px;
+    }
+    .one:nth-child(3) { /*vymazání 3 reference po šířce nahoře*/
+        display: none;
+    }
+    /*******About us******/ 
+     .Fotky-měsíce img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+     .Fotky-měsíce .span-1-of-2 {
+        width: 48%;
+    }
+    .photo {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .photo .span-1-of-2 {
+        width: 48%; 
+    }
+}
+/* Mobile navigation-změna menu z čitelného do hamburgeru */
+@media only screen and (max-width: 1120px) {
+    nav ul li {
+        display: block;
+    }
+    .nav-background {
+/*        display: none; */
+    }
+    .mobile-nav-back {
+        height: 170px;
+        width: 100%;
+        position: fixed;
+        background-color: rgb(4, 58, 105);
+        border-bottom: 2px solid white;
+        display: none;
+        z-index: 100;
+    }
+    .mobile-nav-icon {
+        display: inline-block;
+        z-index: 200;
+        position: fixed;
+        right: 2%;
+    }
+    nav ul {
+        display: none;
+        z-index: 200;
+    }
+    nav ul li a:hover,
+    nav ul li a:active {    
+    border-bottom: 2px solid transparent; /*změna kvůli mobilu, kde se kliká prstem*/
+    }
+}
+
+@media only screen and (max-width: 860px) {
+   
+    /*****photo-gallery****/
+    .photo .span-1-of-2 {
+        width: 96%;
+    }
+    .photo img {
+        margin-left: 10px;    
+        margin-right: 10px;    
+    }
+    .text p {
+     padding-top: 12px;
+    }
+}
+@media only screen and (max-width: 765px) {
+       
+    /*****photo-gallery****/
+    .text p {
+       padding-top: 0px; 
+    }
+}  
+    
+
+@media only screen and (max-width: 750px) { 
+   /****************fotogalerie*********************/
+    .photos{
+        margin-left: 10px;
+        margin-right: 10px; 
+    }
+    
+    .photos .col {
+        margin-left: 0;
+    }
+    
+    .photos li {
+        width: 100%;
+        
+    }
+    /*******About us******/ 
+     .Fotky-měsíce .span-1-of-2 {
+        width: 96%;
+    }
+    
+    .Fotky-měsíce .col {
+        margin-left: 0;
+    }
+    .Fotky-měsíce img {
+        margin-left: 10px;
+        margin-right: 10px;
+    } 
+}
+@media only screen and (max-width: 685px) {
+   /******Reference*****/
+   
+    .col.span-1-of-2.one {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+    .jmeno {
+        float: right;
+        margin-right: 25px;
+    }
+}
+@media only screen and (max-width: 660px) {
+   /*****header******/
+    .header-text {
+        width: 100%;
+        left: 0%;
+        transform: translate(0%,0%);
+    }
+    .header-text h1 {
+        text-align: center;
+    }
+    .btn {
+        display: block; 
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;        
+    }
+    .btn-nesou:link,
+    .btn-nesou:visited {    
+            margin-left: 10px;
+    }
+}

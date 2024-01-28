@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*****reusable*****/
+.row {
+   max-width: 1140px;  /*jinak nefungovala responzivita formuláře*/
+    margin: 0 auto;
+}
+.empty-space {
+    height: 50px;
+}
+/*****stop floating*******/
+.clearfix {zoom: 1}
+.clearfix:after {
+    content:"";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*****header******/
+header {
+    background:  linear-gradient(rgba(54, 58, 56, 0.35),rgba(39, 52, 175, 0)), url("img/pic15.jpg");    
+    background-size: cover;
+    height: 100vh; /*procenta, wiew port, upravuje se pozadí podle velikosti prohlížeče.*/
+    background-attachment: fixed;
+}
+.nav-background {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(4, 58, 105);
+    position: fixed;
+    z-index: 50;
+    border-bottom: 2px solid white;
+    
+}
+#logo img {
+    width: 200px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+     transform: translate(-50%,-50%); /*kompenzace loga do středu stránky */
+}
+nav ul {
+    float: right;
+    margin-top: 7px;    
+    position: fixed;
+    margin-left: 44%;
+    z-index: 100;  /*vyšší priorita, aby bylo vidět menu všude, kfyž scrolluji*/
+}
+nav ul li {
+    display: inline-block;
+    color: rgb(12, 111, 199);
+    margin-left: 10px;
+       
+}
+nav ul li a:link, 
+nav ul li a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 25px;
+    border-bottom: 2px solid transparent;
+}
+nav ul li a:hover,
+nav ul li a:active {
+    transition: border-bottom 0.5s;
+    border-bottom: 2px solid aliceblue;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*rozložení textu ke které straně chci text, tak zadávím parametry*/
+}
+ 
+.header-text h1 {
+    color: rgb(4, 58, 105); 
+    font-size: 40px;
+    text-transform: uppercase; /*malá, velká písmena*/
+    letter-spacing: 2.6px; 
+    word-spacing: 3.5px;   /*mezery mezi slovy*/
+}
+.btn {
+    display: inline-block; /*aby se dal použít, jak padding tak margin*/
+    color: aliceblue;
+    text-decoration: none; 
+    font-size: 20px;
+    border: 1px solid black; 
+    border-radius: 10px; 
+    margin-top: 10px;   
+    padding: 5px;      
+    letter-spacing: 0.5px; /*písmena mezi sebou*/  
+    margin-left: 60px;
+}
+.btn-sou:link,                                   
+.btn-sou:visited {                               
+     color: aliceblue;                           
+     background: rgb(4, 58, 105);                          
+                  
+}                                                
+                    
+.btn-sou:hover,
+.btn-sou:active {
+    transition: background 0.5s;
+    background: white;                      /*průhledný background-transparent*/
+    color: black;         
+    border: 1px solid #f5f5f5;       
+
+}
+.btn-nesou:link,
+.btn-nesou:visited {    
+    color: aliceblue; 
+    background: rgb(4, 58, 105);
+    margin-left: 10px;
+    
+}
+
+.btn-nesou:hover,
+.btn-nesou:active {
+     transition: background 0.5s;
+     background: white;
+     color: black;
+     border: 1px solid #f5f5f5;
+}
+/*ˇMobile navigation*/
+.mobile-nav-icon {
+    float: right;
+    margin-top: 5px;
+    display: none;
+}
+
+/*******About us******/  /*Může být reusable nahoře, je to bráno na všechny třídy, aby se to nepsalo na každou zvlášť*/
+.heading-main h2 {
+   text-align: center; 
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 2em;
+    
+}
+.heading-main h2:after { 
+    content: "";
+    display: block;
+    width: 150px;
+    border-bottom: 2px solid black;
+    margin: 20px auto;
+    
+}
+
+.Fotky-měsíce img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px black;
+        
+}
+/*****photo-gallery****/
+.photo img {
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px black;
+    
+}
+.text {
+    margin-bottom: 20px;
+}
+.text div {
+    width: 40px;
+    height: 40py;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 8px;
+    float: left;
+}
+.text p {
+    margin-left: 60px;
+    font-size: 20px;   
+        
+}
+
+/******Reference*****/
+.reference {
+    background: rgb(121, 156, 187); 
+    background-attachment: fixed;
+}
+
+.one {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.one p {
+    font-style: italic;
+    font-weight: bold;
+}
+.jmeno {
+      margin-top: 10px;
+}
+
+.jmeno img {
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+}
+.jmeno p {
+   padding: 13px;
+    margin-left: 100px;
+    font-style: normal;
+}
+/********fotogalerie*********/
+
+.photos img {
+    width: 100%;
+    height: 400px;    
+    transform: scale(1.15);    
+    
+}
+.photos img:hover{
+    transition: transform 0.5s, opacity 0.5s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.photos li {
+    list-style-type: none; /*vyrušení teček u seznamu ul*/    
+    overflow: hidden; /*to co přeteče přes obrázek se smaže*/
+    height: 400px; 
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px black;
+}
+/******contact-form*********/
+
+.contact-form {
+    max-width: 700px;
+    text-align: center;
+}
+
+.contact-form input {
+    width: 80%;
+    margin: 5px 8px;
+    padding: 7px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.contact-form textarea {
+    width: 80%;
+    margin: 5px 8px;
+    padding: 7px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    font-family: Arial;
+}
+input[type="submit"] {
+    background: white;    
+    color: rgb(143, 5, 5);
+    font-size: 20px;
+}
+input[type="submit"]:hover {
+    background-color: rgb(121, 156, 187);
+    color: rgb(143, 5, 5);
+    font-size: 20px;
+    transition: background-color 0.5s;
+}
+
+/******Footer css**********/
+
+.page {
+    background: rgb(121, 156, 187);
+    margin-top: 30px;
+    color:  white;
+}
+
+.social {
+    text-align: center;
+    margin: 10px;
+}
+.social p {
+    display: inline;
+    margin-right: 30px;
+    
+}
+.page-text {
+     text-align: center;
+     margin: 10px;
+}
+.social p a:link,
+.social p a:visited  {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 25px;
+    
+}
+
+.social p a:active,
+.social p a:hover {
+    color: rgb(143, 5, 5);
+}
+
+
